@@ -37,4 +37,4 @@ export interface ICategoryFormData {
     icon?: IconName;
     color?: TColor;
 }
-export type TCategoryType = 'income' | 'expense';
+export type TCategoryType = 'income' | 'expense' | 'all';

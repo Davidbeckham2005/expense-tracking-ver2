@@ -5,7 +5,7 @@ import { useCategoryStore } from '../../store/useCategoryStore';
 import { formatVND } from '../../utils/format';
 import type { IconName, TColor } from '../../types/ICategories';
 import { icons } from '../../constants/icon';
-import {colors} from '../../constants/color';
+import { colors } from '../../constants/color';
 export default function ExpenseManager() {
     const { transactions } = useTransactionStore();
     const { categories } = useCategoryStore();
@@ -38,8 +38,8 @@ export default function ExpenseManager() {
                                             <p className="truncate text-xs text-slate-500">{item.note || 'Không có ghi chú'} · {item.transaction_date.split('T')[0]}</p>
                                         </div>
                                     </div>
-                                    <div className="text-sm font-semibold text-rose-600">
-                                        - {formatVND(item.amount)}đ
+                                    <div className={`text-sm font-medium ${item.type === 'expense' ? 'text-red-500' : 'text-green-500'}`}>
+                                        {item.type === 'expense' ? '-' : '+'} {formatVND(item.amount)}
                                     </div>
                                 </div>
                             );

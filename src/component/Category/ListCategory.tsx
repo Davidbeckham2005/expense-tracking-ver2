@@ -28,12 +28,16 @@ export default function ListCategory() {
             toast.error("Xóa danh mục thất bại");
         }
     }
-    const filteredCategories = categories.filter((cat) => cat.type === activeType);
+    const filteredCategories = categories.filter((cat) => {
+        if (activeType === 'all') return true;
+        return cat.type === activeType;
+    });
 
     return (
 
         <div className="min-h-screen space-y-6 rounded-2xl bg-white p-4 shadow-sm">
             <div className="flex gap-2">
+               
                 <button
                     onClick={() => setActiveType("expense")}
                     className={`rounded-full border px-4 py-2 text-sm font-medium transition ${activeType === "expense"
@@ -52,6 +56,15 @@ export default function ListCategory() {
                         }`}
                 >
                     Thu nhập
+                </button>
+                <button
+                    onClick={() => setActiveType("all")}
+                    className={`rounded-full border px-4 py-2 text-sm font-medium transition ${activeType === "all"
+                        ? "border-cyan-500 bg-cyan-50 text-cyan-600"
+                        : "border-gray-200 bg-white text-gray-600 hover:bg-gray-50"
+                        }`}
+                >
+                    Tất cả
                 </button>
                 {showCreateCategory && (
                     <AddCategory
