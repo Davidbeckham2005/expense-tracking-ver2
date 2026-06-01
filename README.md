@@ -2,7 +2,7 @@
 A personal finance management application that helps users track income and expenses, automatically categorize transactions using AI, and manage budgets in real time.
 
 # Demo
-[Expense Tracking App Demo](https://quan-ly-chi-tieu-thong-minh-dvbeckham05.vercel.app)
+[Expense Tracking App Demo]([https://quan-ly-chi-tieu-thong-minh-dvbeckham05.vercel.app](https://expense-tracking-ve-git-064f4b-dinhhoangkhamtb04-9130s-projects.vercel.app/))
 # Getting Started (Local Setup)
 1. Clone the repository
 ```bash
