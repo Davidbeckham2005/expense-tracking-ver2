@@ -9,7 +9,7 @@ export interface ICategory {
     id: string;
     user_id: string;
     name: string;
-    type: 'income' | 'expense';
+    type: TCategoryType;
     icon?: IconName;
     color?: TColor;
     create_at?: string;
@@ -19,21 +19,21 @@ export interface ICategory {
 
 export interface ICreateCategory {
     name: string;
-    type: 'income' | 'expense';
+    type: TCategoryType;
     icon?: IconName;
     color?: TColor;
 }
 
 export interface IUpdateCategoryDto {
     name?: string;
-    type?: 'income' | 'expense';
+    type?: TCategoryType;
     icon?: IconName;
     color?: TColor;
 }
 
 export interface ICategoryFormData {
     name: string;
-    type: 'income' | 'expense';
+    type: TCategoryType;
     icon?: IconName;
     color?: TColor;
 }
